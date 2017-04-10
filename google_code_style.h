@@ -5,92 +5,92 @@
 // Lisence: GPL
 //
 // File: code_samples/code_style/google_code_style.h
-// (ÎÄ¼þÃûÒªÈ«²¿Ð¡Ð´£¬¿ÉÒÔ°üº¬ÏÂ»®Ïß£¨_£©»ò¶ÌÏß£¨-£©)
-// C++ÎÄ¼þÒÔ.cpp ½áÎ²£¬Í·ÎÄ¼þÒÔ.h ½áÎ²¡£
+// (æ–‡ä»¶åè¦å…¨éƒ¨å°å†™ï¼Œå¯ä»¥åŒ…å«ä¸‹åˆ’çº¿ï¼ˆ_ï¼‰æˆ–çŸ­çº¿ï¼ˆ-ï¼‰)
+// C++æ–‡ä»¶ä»¥.cpp ç»“å°¾ï¼Œå¤´æ–‡ä»¶ä»¥.h ç»“å°¾ã€‚
 //
-// Google C++ code Style ´úÂëÊ¾Àý (¼òÌåÖÐÎÄ°æ)
+// Google C++ code Style ä»£ç ç¤ºä¾‹ (ç®€ä½“ä¸­æ–‡ç‰ˆ)
 //
-// *×¢ÊÍ  Ê¹ÓÃ//»ò/* */£¬µ«ÒªÍ³Ò»¡£
-// *×¢ÊÍ  Ã¿Ò»¸öÎÄ¼þ°æÈ¨Ðí¿É¼°×÷ÕßÐÅÏ¢ºó£¬¶ÔÎÄ¼þÄÚÈÝ½øÐÐ×¢ÊÍËµÃ÷
-// -------------------------------------------------------------×î¶à²»ÄÜ³¬¹ý80ÐÐ
+// *æ³¨é‡Š  ä½¿ç”¨//æˆ–/* */ï¼Œä½†è¦ç»Ÿä¸€ã€‚
+// *æ³¨é‡Š  æ¯ä¸€ä¸ªæ–‡ä»¶ç‰ˆæƒè®¸å¯åŠä½œè€…ä¿¡æ¯åŽï¼Œå¯¹æ–‡ä»¶å†…å®¹è¿›è¡Œæ³¨é‡Šè¯´æ˜Ž
+// -------------------------------------------------------------æœ€å¤šä¸èƒ½è¶…è¿‡80è¡Œ
 #ifndef CODE_SAMPLES_CODE_STYLE_GOOGLE_CODE_STYLE_
 #define CODE_SAMPLES_CODE_STYLE_GOOGLE_CODE_STYLE_
-// ÃüÃû¿Õ¼äµÄÃû³ÆÊÇÈ«Ð¡Ð´µÄ£¬ÆäÃüÃû»ùÓÚÏîÄ¿Ãû³ÆºÍÄ¿Â¼½á¹¹
-// ²»ÒªÉùÃ÷ÃüÃû¿Õ¼ästd ÏÂµÄÈÎºÎÄÚÈÝ
+// å‘½åç©ºé—´çš„åç§°æ˜¯å…¨å°å†™çš„ï¼Œå…¶å‘½ååŸºäºŽé¡¹ç›®åç§°å’Œç›®å½•ç»“æž„
+// ä¸è¦å£°æ˜Žå‘½åç©ºé—´std ä¸‹çš„ä»»ä½•å†…å®¹
 namespace code_samples {
 namespace code_style {
 
-// **±äÁ¿ÃüÃû**
-// ¾¡¿ÉÄÜ¸ø³öÃèÊöÐÔÃû³Æ£¬²»Òª½ÚÔ¼¿Õ¼ä
-// ±äÁ¿ÃûÒ»ÂÉÐ¡Ð´£¬µ¥´Ê¼äÒÔÏÂ»®ÏßÏàÁ¬
-// ÉÙÓÃÈ«ÓÃ±äÁ¿£¬¿ÉÒÔÒÔg_Óë¾Ö²¿±äÁ¿Çø·Ö
+// **å˜é‡å‘½å**
+// å°½å¯èƒ½ç»™å‡ºæè¿°æ€§åç§°ï¼Œä¸è¦èŠ‚çº¦ç©ºé—´
+// å˜é‡åä¸€å¾‹å°å†™ï¼Œå•è¯é—´ä»¥ä¸‹åˆ’çº¿ç›¸è¿ž
+// å°‘ç”¨å…¨ç”¨å˜é‡ï¼Œå¯ä»¥ä»¥g_ä¸Žå±€éƒ¨å˜é‡åŒºåˆ†
 int g_my_exciting_global_variable;
 
-// Ö»ÓÐÔÚÃèÊöÊý¾ÝÊ±ÓÃstruct £¬ÆäËûÇé¿ö¶¼ÓÃclass
+// åªæœ‰åœ¨æè¿°æ•°æ®æ—¶ç”¨struct ï¼Œå…¶ä»–æƒ…å†µéƒ½ç”¨class
 typedef struct CodeStyle {
     uint32_t type;
 } CodeStyle;
 
-// **Àà×¢ÊÍ**
-// Ã¿¸öÀàµÄ¶¨ÒåÒª¸½×ÅÃèÊöÀàµÄ¹¦ÄÜºÍÓÃ·¨µÄ×¢ÊÍ
+// **ç±»æ³¨é‡Š**
+// æ¯ä¸ªç±»çš„å®šä¹‰è¦é™„ç€æè¿°ç±»çš„åŠŸèƒ½å’Œç”¨æ³•çš„æ³¨é‡Š
 //
-// GoogleCodeStyle , Í¨¹ý´úÂëÊ¾Àý£¬Õ¹ÏÖgoogle c++ code style
+// GoogleCodeStyle , é€šè¿‡ä»£ç ç¤ºä¾‹ï¼Œå±•çŽ°google c++ code style
 //
-// (°´Ðè×¢Ã÷synchronization assumptions£¬ÊÇ·ñÏß³Ì°²È«)
+// (æŒ‰éœ€æ³¨æ˜Žsynchronization assumptionsï¼Œæ˜¯å¦çº¿ç¨‹å®‰å…¨)
 class GoogleCodeStyle {
  public :
 
-   // ** ÉùÃ÷´ÎÐò **
-   // - typedefs ºÍenums£»
-   // - ³£Á¿£»
-   // - ¹¹Ôìº¯Êý£»
-   // - Îö¹¹º¯Êý£»
-   // - ³ÉÔ±º¯Êý£¬º¬¾²Ì¬³ÉÔ±º¯Êý£»
-   // - Êý¾Ý³ÉÔ±£¬º¬¾²Ì¬Êý¾Ý³ÉÔ±¡£
+   // ** å£°æ˜Žæ¬¡åº **
+   // - typedefs å’Œenumsï¼›
+   // - å¸¸é‡ï¼›
+   // - æž„é€ å‡½æ•°ï¼›
+   // - æžæž„å‡½æ•°ï¼›
+   // - æˆå‘˜å‡½æ•°ï¼Œå«é™æ€æˆå‘˜å‡½æ•°ï¼›
+   // - æ•°æ®æˆå‘˜ï¼Œå«é™æ€æ•°æ®æˆå‘˜ã€‚
 
-   // **ÀàÐÍÃüÃû**
-   // Ã¿¸öµ¥´ÊÒÔ´óÐ´×ÖÄ¸¿ªÍ·£¬²»°üº¬ÏÂ»®Ïß
-   // ËùÓÐÀàÐÍÃüÃû¡ª¡ªÀà¡¢½á¹¹Ìå¡¢ÀàÐÍ¶¨Òå£¨typedef£©¡¢Ã¶¾Ù¡ª¡ªÊ¹ÓÃÏàÍ¬Ô¼¶¨
+   // **ç±»åž‹å‘½å**
+   // æ¯ä¸ªå•è¯ä»¥å¤§å†™å­—æ¯å¼€å¤´ï¼Œä¸åŒ…å«ä¸‹åˆ’çº¿
+   // æ‰€æœ‰ç±»åž‹å‘½åâ€”â€”ç±»ã€ç»“æž„ä½“ã€ç±»åž‹å®šä¹‰ï¼ˆtypedefï¼‰ã€æžšä¸¾â€”â€”ä½¿ç”¨ç›¸åŒçº¦å®š
    typedef enum StyleType {
-     // Ã¶¾ÙÖµÓ¦È«²¿´óÐ´£¬µ¥´Ê¼äÒÔÏÂ»®ÏßÏàÁ¬
+     // æžšä¸¾å€¼åº”å…¨éƒ¨å¤§å†™ï¼Œå•è¯é—´ä»¥ä¸‹åˆ’çº¿ç›¸è¿ž
      GOOGLE_CODE_STYLE = 0,
      K_AND_R,
      POCO
    } StyleType;
 
-   // ³£Á¿ÃüÃû£¬ÔÚÃû³ÆÇ°¼Ók
+   // å¸¸é‡å‘½åï¼Œåœ¨åç§°å‰åŠ k
    const int kDaysInAWeek = 7;
 
    GoogleCodeStyle() {}
    ~GoogleCodeStyle() {}
-   // **º¯Êý×¢ÊÍ**
-   // º¯ÊýÉùÃ÷´¦×¢ÊÍÃèÊöº¯Êý¹¦ÄÜ£¬¶¨Òå´¦ÃèÊöº¯ÊýÊµÏÖ.
-   // - inputs£¨ÊäÈë£©¼°outputs£¨Êä³ö£©£»
-   // - ¶ÔÀà³ÉÔ±º¯Êý¶øÑÔ£ºº¯Êýµ÷ÓÃÆÚ¼ä¶ÔÏóÊÇ·ñÐèÒª±£³ÖÒýÓÃ²ÎÊý£¬ÊÇ·ñ»áÊÍ·ÅÕâÐ©²ÎÊý£»
-   // - Èç¹ûº¯Êý·ÖÅäÁË¿Õ¼ä£¬ÐèÒªÓÉµ÷ÓÃÕßÊÍ·Å£»
-   // - ²ÎÊýÊÇ·ñ¿ÉÒÔÎªNULL£»
-   // - ÊÇ·ñ´æÔÚº¯ÊýÊ¹ÓÃµÄÐÔÄÜÒþÓÇ£¨performance implications£©£»
-   // - Èç¹ûº¯ÊýÊÇ¿ÉÖØÈëµÄ£¨re-entrant£©£¬ÆäÍ¬²½Ç°Ìá£¨synchronization assumptions£©
-   // ¾ÙÀý £º
-   // ³õÊ¼»¯º¯Êý
+   // **å‡½æ•°æ³¨é‡Š**
+   // å‡½æ•°å£°æ˜Žå¤„æ³¨é‡Šæè¿°å‡½æ•°åŠŸèƒ½ï¼Œå®šä¹‰å¤„æè¿°å‡½æ•°å®žçŽ°.
+   // - inputsï¼ˆè¾“å…¥ï¼‰åŠoutputsï¼ˆè¾“å‡ºï¼‰ï¼›
+   // - å¯¹ç±»æˆå‘˜å‡½æ•°è€Œè¨€ï¼šå‡½æ•°è°ƒç”¨æœŸé—´å¯¹è±¡æ˜¯å¦éœ€è¦ä¿æŒå¼•ç”¨å‚æ•°ï¼Œæ˜¯å¦ä¼šé‡Šæ”¾è¿™äº›å‚æ•°ï¼›
+   // - å¦‚æžœå‡½æ•°åˆ†é…äº†ç©ºé—´ï¼Œéœ€è¦ç”±è°ƒç”¨è€…é‡Šæ”¾ï¼›
+   // - å‚æ•°æ˜¯å¦å¯ä»¥ä¸ºNULLï¼›
+   // - æ˜¯å¦å­˜åœ¨å‡½æ•°ä½¿ç”¨çš„æ€§èƒ½éšå¿§ï¼ˆperformance implicationsï¼‰ï¼›
+   // - å¦‚æžœå‡½æ•°æ˜¯å¯é‡å…¥çš„ï¼ˆre-entrantï¼‰ï¼Œå…¶åŒæ­¥å‰æï¼ˆsynchronization assumptionsï¼‰
+   // ä¸¾ä¾‹ ï¼š
+   // åˆå§‹åŒ–å‡½æ•°
    Init() {}
 
-   // ÆÕÍ¨º¯ÊýÃûÒÔ´óÐ´×ÖÄ¸¿ªÍ·£¬Ã¿¸öµ¥´ÊÊ××ÖÄ¸´óÐ´£¬Ã»ÓÐÏÂ»®Ïß
+   // æ™®é€šå‡½æ•°åä»¥å¤§å†™å­—æ¯å¼€å¤´ï¼Œæ¯ä¸ªå•è¯é¦–å­—æ¯å¤§å†™ï¼Œæ²¡æœ‰ä¸‹åˆ’çº¿
    //
    uint32_t MyExcitingMethod(CodeStype &code_style, char *output);
-   // ´æÈ¡º¯ÊýÒªÓë´æÈ¡µÄ±äÁ¿ÃûÆ¥Åä
+   // å­˜å–å‡½æ•°è¦ä¸Žå­˜å–çš„å˜é‡ååŒ¹é…
    inline int num_entries() const { return num_entries_; }
    inline void set_num_entries(int num_entries) { num_entries_ = num_entries; }
 
-   // ÀàµÄ³ÉÔ±±äÁ¿ÒÔÏÂ»®Ïß½áÎ²
+   // ç±»çš„æˆå‘˜å˜é‡ä»¥ä¸‹åˆ’çº¿ç»“å°¾
    int num_completed_connections_;
 
  protected :
 
  private :
-   // **ÀàÊý¾Ý³ÉÔ±**
-   // Ã¿¸öÀàÊý¾Ý³ÉÔ±£¨Ò²½ÐÊµÀý±äÁ¿»ò³ÉÔ±±äÁ¿£©Ó¦×¢ÊÍËµÃ÷ÓÃÍ¾¡£
-   // Èç¹û±äÁ¿¿ÉÒÔ½ÓÊÜNULL »ò-1, µÈ¾¯½äÖµ£¨sentinel values£©£¬ÐëËµÃ÷Ö®
+   // **ç±»æ•°æ®æˆå‘˜**
+   // æ¯ä¸ªç±»æ•°æ®æˆå‘˜ï¼ˆä¹Ÿå«å®žä¾‹å˜é‡æˆ–æˆå‘˜å˜é‡ï¼‰åº”æ³¨é‡Šè¯´æ˜Žç”¨é€”ã€‚
+   // å¦‚æžœå˜é‡å¯ä»¥æŽ¥å—NULL æˆ–-1, ç­‰è­¦æˆ’å€¼ï¼ˆsentinel valuesï¼‰ï¼Œé¡»è¯´æ˜Žä¹‹
    int num_entries_;
 
 }; // class GoogleCodeStyle
